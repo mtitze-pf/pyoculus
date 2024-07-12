@@ -6,6 +6,9 @@
 from pyoculus.problems import CartesianBfield
 import numpy as np
 
+from simsopt.field.biotsavart import BiotSavart
+
+
 class SimsgeoBiotSavart(CartesianBfield):
     def __init__(self, bs, R0, Z0, Nfp=1):
         """! Set up the problem to compute the magnetic field for simsopt.geo.BiotSavart
@@ -13,7 +16,6 @@ class SimsgeoBiotSavart(CartesianBfield):
         @param R0 the magnetic axis R coordinate at phi=0 plane
         @param Z0 the magnetic axis Z coordinate at phi=0 plane
         """
-        from simsopt.geo.biotsavart import BiotSavart
 
         super().__init__(R0, Z0, Nfp)
 
